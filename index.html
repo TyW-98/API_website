@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Website</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Weather Forecast</h1>
 
-    <input type="text" name="location" placeholder="Enter the desired location" />
-    <button type="button" name="submit">Get Weather</button>
-    
-</body>
+    <form action="/" method="post">
+      <label for="locationName">City Name: </label>
+      <input
+        type="text"
+        name="locationName"
+        placeholder="Enter the desired location"
+      />
+      <button type="submit" name="submit">Get Weather</button>
+    </form>
+  </body>
 </html>
