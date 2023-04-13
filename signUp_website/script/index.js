@@ -36,13 +36,19 @@ app.post("/", (req, res) => {
   const url = "https://us21.api.mailchimp.com/3.0/lists/1ab5ee1e27";
   const options = {
     method: "POST",
-    auth: "AuxUser1:a43121af439423dbc369f0fb2bfe51a8-us21",
+    auth: "AuxUser1:API_KEY",
   };
 
   const request = https.request(url, options, function (response) {
     response.on("data", function (data) {});
-  });
 
+    if (response.statusCode === 200) {
+        res.sendFile(path.join(__dirname,"../success.html"));
+    } else {
+        res.sendFile(path.join(__dirname,"../failure.html"));
+    }
+
+  });
   request.write(jsonData);
   request.end();
 
