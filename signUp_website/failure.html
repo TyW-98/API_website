@@ -14,11 +14,8 @@
     />
 
     <style>
-        body {
+        body{
             margin: 20px;
-        }
-
-        h1, p:first-of-type {
             text-align: center;
         }
 
@@ -29,5 +26,9 @@
       <h1 class="display-4">⚠ Uh oh! Failed to Subscribed</h1>
       <p class="lead">Please try again later or contact the developer!</p>
     </div>
+
+    <form action="/failure" method="post">
+      <button class="btn btn-warning" type="submit" name="retry">Try Again</button>
+    </form>
   </body>
 </html>
